@@ -31,7 +31,7 @@ class Point:
         return self.x, self.y 
     
     @coordinates.setter
-    def coordinates(self, new:tuple):
+    def coordinates(self, new:tuple) -> bool:
         self.x = new[0]
         self.y = new[1]
         return True
@@ -55,8 +55,11 @@ def fourth_task(strs:list) -> tuple:
 if __name__ == "__main__":
     # 1 task test
     print(f"[1] - {first_task([1,2,2,3,45,6,7,1,1,1,1,1,-1,-100000,-100000,-100000])}")
+    
+    
     # 2 task test
     print(f"[2] - {second_task(-5,10)}")
+    
     
     # 3 task test
     p1 = Point(1,6.123213)
@@ -67,9 +70,10 @@ if __name__ == "__main__":
     
         # coordinate getter setter
     print(f"Координаты p1 getter - {p1.coordinates}")
-    p1.coordinates = 1, 220
+    p1.coordinates = -11, 220
     print("Координаты p1 setter - True")
     print(f"Координаты p1 getter - {p1.coordinates}")
+    
     
     # 4 task test
     print(f'[4] - {fourth_task(["Змея", "Python", "Северная Дакота", "Хочу", "Работать", ":)"])}')
