@@ -1,6 +1,3 @@
-from decimal import Decimal
-
-
 # 1. Написать функцию, 
 # которая принимает на вход список целых чисел и возвращает новый список, 
 # содержащий только уникальные элементы из исходного списка.
@@ -10,7 +7,7 @@ def first_task(int_list:list) -> list:
 
 # 2. Написать функцию, которая принимает на вход два целых числа (минимум и максимум)
 # и возвращает список всех простых чисел в заданном диапазоне.
-def second_tast(first:int, second:int) -> list:
+def second_task(first:int, second:int) -> list:
     result = []
     for i in range(first,second + 1):
         result.append(i)
@@ -40,15 +37,26 @@ class Point:
         return True
 
 
+# 4. Написать программу, которая сортирует список строк по длине, 
+# сначала по возрастанию, а затем по убыванию.
+def fourth_task(strs:list) -> tuple:
+    asc_sort = sorted(strs, key=len) 
+    desc_sort = sorted(strs, key=len, reverse=True) 
+    return asc_sort, desc_sort
 
 
 
 
+
+
+# TEST CASES # TEST CASES # TEST CASES 
+# TEST CASES # TEST CASES # TEST CASES 
+# TEST CASES # TEST CASES # TEST CASES 
 if __name__ == "__main__":
     # 1 task test
     print(f"[1] - {first_task([1,2,2,3,45,6,7,1,1,1,1,1,-1,-100000,-100000,-100000])}")
     # 2 task test
-    print(f"[2] - {second_tast(-5,10)}")
+    print(f"[2] - {second_task(-5,10)}")
     
     # 3 task test
     p1 = Point(1,6.123213)
@@ -63,4 +71,5 @@ if __name__ == "__main__":
     print("Координаты p1 setter - True")
     print(f"Координаты p1 getter - {p1.coordinates}")
     
-    
+    # 4 task test
+    print(f'[4] - {fourth_task(["Змея", "Python", "Северная Дакота", "Хочу", "Работать", ":)"])}')
