@@ -8,10 +8,7 @@ def first_task(int_list:list) -> list:
 # 2. Написать функцию, которая принимает на вход два целых числа (минимум и максимум)
 # и возвращает список всех простых чисел в заданном диапазоне.
 def second_task(first:int, second:int) -> list:
-    result = []
-    for i in range(first,second + 1):
-        result.append(i)
-    return result
+    return [i for i in range(first,second + 1)]
 
 
 # 3. Создать класс Point, который представляет собой точку в двумерном пространстве. 
